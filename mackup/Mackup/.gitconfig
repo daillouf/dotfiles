@@ -2,3 +2,5 @@
 	signingkey = François DAILLOUX <francoisdailloux@gmail.com>
 	name = François DAILLOUX
 	email = francoisdailloux@icloud.com
+[core]
+	editor = nano
