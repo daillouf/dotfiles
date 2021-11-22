@@ -2788,7 +2788,7 @@ auhal-audio-device=0
 #subsdec-align=-1
 
 # Subtitle text encoding (string)
-#subsdec-encoding=
+subsdec-encoding=Big5
 
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1

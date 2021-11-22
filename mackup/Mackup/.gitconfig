@@ -4,3 +4,7 @@
 	email = francoisdailloux@icloud.com
 [core]
 	editor = nano
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master

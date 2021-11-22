@@ -1,7 +1,7 @@
 {
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.defaultInterpreterPath": "/Users/francois/Library/Caches/pypoetry/virtualenvs/ai-benchmark-dockerized-9x9m0lXH-py3.8/bin/python",
+    "python.defaultInterpreterPath": "/Users/francois/Documents/Presta/lsi_venv/bin/python",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "editor.formatOnSave": true,
@@ -10,5 +10,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.accessibilitySupport": "off",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "",
+    "terminal.external.osxExec": "iterm.app"
 }
