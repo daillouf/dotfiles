@@ -13,5 +13,8 @@
     "editor.minimap.enabled": false,
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "",
-    "terminal.external.osxExec": "iterm.app"
+    "terminal.external.osxExec": "iterm.app",
+    "window.zoomLevel": -1,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "python.formatting.blackPath": "/Users/francois/Documents/Presta/lsi_venv/bin/darker"
 }

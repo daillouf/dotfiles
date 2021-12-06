@@ -8,3 +8,7 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[diff]
+	tool = diff-so-fancy
+[rerere]
+	enabled = true
