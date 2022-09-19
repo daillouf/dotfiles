@@ -4,6 +4,7 @@
 	email = francoisdailloux@icloud.com
 [core]
 	editor = nano
+	excludesfile = /Users/francois/Documents/Presta/local_setup_cloud/.globalgitignore
 [pull]
 	rebase = false
 [init]
@@ -12,3 +13,8 @@
 	tool = diff-so-fancy
 [rerere]
 	enabled = true
+[alias]
+	rcheckout = !sh ~/logiciels/git-rcheckout.sh
+	rpull = !sh ~/logiciels/rpull.sh
+[status]
+	submodulesummary = 1

@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/francois/.oh-my-zsh"
 
+PYTHONDONTWRITEBYTECODE=1
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git pass poetry macos kubectl minikube)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,8 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-export PATH="$HOME/.poetry/bin:$PATH"
-plugins=(git pass)
+
 if [ "$(sysctl -n sysctl.proc_translated)" = "1" ]; then
     local brew_path="/usr/local/homebrew/bin"
 else
@@ -110,7 +110,7 @@ else
 fi
 export PATH="${brew_path}:${PATH}"
 
-export NVM_DIR="$HOME/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -119,19 +119,52 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/francois/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/francois/logiciels/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/francois/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/francois/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/francois/logiciels/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/francois/logiciels/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/francois/opt/anaconda3/bin:$PATH"
+        export PATH="/Users/francois/logiciels/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init --path)" 
+
+
+alias hackerman="~/logiciels/go/bin/gomatrix -k"
+alias pause="pmset displaysleepnow"
+
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+alias ls="exa -lhg --git --group-directories-first"
+
+
+alias ku="kubectl"
+
+alias gp="git push"
+alias gc="git commit"
+alias gpl="git pull"
+
+kk(){
+    ku kustomize ${1:-.} | ku apply -f -
+}
+
+
+kd(){
+    ku kustomize ${1:-.} | ku delete -f -
+}
+
+kps(){
+    ku get pods | grep "${1:-}"
+}
+[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
+
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+

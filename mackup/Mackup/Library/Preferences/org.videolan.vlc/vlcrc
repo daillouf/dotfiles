@@ -1829,7 +1829,7 @@ macosx-recentitems=0
 [auhal] # HAL AudioUnit output
 
 # Audio volume (integer)
-auhal-volume=320
+#auhal-volume=256
 
 # Last audio device (string)
 auhal-audio-device=0
@@ -3930,7 +3930,7 @@ vod-server=any
 #keystore=
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
 #loop=0
@@ -3972,7 +3972,7 @@ random=1
 #preparse-timeout=5000
 
 # Allow metadata network access (boolean)
-metadata-network-access=1
+#metadata-network-access=0
 
 # Subdirectory behavior (string)
 #recursive=collapse

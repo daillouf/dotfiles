@@ -1,10 +1,9 @@
 {
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.defaultInterpreterPath": "/Users/francois/Documents/Presta/lsi_venv/bin/python",
+    "python.defaultInterpreterPath": "",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
-    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -14,7 +13,41 @@
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "",
     "terminal.external.osxExec": "iterm.app",
-    "window.zoomLevel": -1,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "maven.executable.options": "--settings=./shippable-maven-settings.xml",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true
+    },
+    "snyk.token": "995150f1-035b-4f7b-befe-6c3fa0c23d17",
+    "python.linting.mypyEnabled": true,
+    "redhat.telemetry.enabled": false,
+    "snyk.yesWelcomeNotification": false,
+    "git.confirmSync": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "editor.multiCursorModifier": "ctrlCmd",
-    "python.formatting.blackPath": "/Users/francois/Documents/Presta/lsi_venv/bin/darker"
+    "kite.showWelcomeNotificationOnStartup": false,
+    "gitlens.plusFeatures.enabled": false,
+    "python.formatting.blackPath": "/Users/francois/.local/bin/darker",
+    "editor.formatOnSave": true,
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
+    "workbench.preferredHighContrastLightColorTheme": "Default Light+",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "workbench.editorAssociations": {
+        "*.xls": "default"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false
 }
